@@ -45,12 +45,13 @@ class Duitku_Dana_ApiRequestor {
     else {
       $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
       $result_array = json_decode($result);
-      if ($httpcode != 200) {
-        $message = 'Duitku Error (' . $result . '): ';            
-        throw new Exception($message, $httpcode);
+      $status_code = $result_array->statusCode;
+      if ($httpcode == 200 && $status_code == '00') {
+        return $result_array;
       }
       else {
-        return $result_array;
+        $message = 'Duitku Error (' . $result . '): ';            
+        throw new Exception($message, $httpcode);
       }
     }
   }
