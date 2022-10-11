@@ -14,9 +14,9 @@
  */
 
 namespace Duitku\Dana\Helper;
-include_once('Duitku/DuitkuCore.php');
+// include_once('Duitku/DuitkuCore.php');
 use Duitku\Dana\Helper\DuitkuConstants;
-use Duitku_Dana_Core;
+use Duitku\Dana\Helper\Duitku\Duitku_Dana_Core;
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**

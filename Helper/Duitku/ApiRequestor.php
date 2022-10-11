@@ -1,4 +1,5 @@
 <?php
+namespace Duitku\Dana\Helper\Duitku;
 
 class Duitku_Dana_ApiRequestor {
 

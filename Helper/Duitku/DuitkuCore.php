@@ -1,5 +1,7 @@
 <?php
-include_once('ApiRequestor.php');
+namespace Duitku\Dana\Helper\Duitku;
+// include_once('ApiRequestor.php');
+use Duitku\Dana\Helper\Duitku\Duitku_Dana_ApiRequestor;
 class Duitku_Dana_Core {
 
   public static function getRedirectionUrl($baseUrl, $params)
